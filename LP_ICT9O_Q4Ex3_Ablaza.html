@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>Q4 | Exercise 3</title>
+	<style>
+		body{
+			padding: 2% 5%;
+			background: linear-gradient(to right,darkslategrey 3%,black 3%);
+			font-family: Lucida Console, monospace;
+			color: white;
+		}
+	</style>
+</head>
+<body onclick="displayAns()">
+	<h1>Exercise 3: JavaScript Arithmetic Operators</h1>
+	<h4>Number 1 = <strong id="nd1"></strong> || Number 2 = <strong id="nd2"></strong></h4>
+	<ol>
+		<li>SUM = <strong id="li1"></strong></li>
+		<li>DIFF = <strong id="li2"></strong></li>
+		<li>PROD = <strong id="li3"></strong></li>
+		<li>QUOTIENT = <strong id="li4"></strong></li>
+		<li>MOD = <strong id="li5"></strong></li>
+	</ol>
+
+	<script>
+		let num1 = 8, num2 = 7;
+		answered = false;
+
+		document.getElementById("nd1").innerHTML = num1;
+		document.getElementById("nd2").innerHTML = num2;
+
+		function displayAns(){
+			if(answered){
+				return;
+			}
+			if(window.confirm("Get answers?")){
+			document.getElementById("li1").innerHTML = num1 + num2;
+			document.getElementById("li2").innerHTML = num1 - num2;
+			document.getElementById("li3").innerHTML = num1 * num2;
+			document.getElementById("li4").innerHTML = num1 / num2;
+			document.getElementById("li5").innerHTML = num1 % num2;
+			answered = true;
+			}
+		}
+	</script>
+</body>
+</html>
